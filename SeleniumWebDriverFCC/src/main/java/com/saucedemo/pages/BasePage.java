@@ -1,0 +1,37 @@
+package com.saucedemo.pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class BasePage {
+    // public abstract class BasePage
+    // abstract classes cannot be instantiated, child classes cannot create instance of this abstract class
+
+    // We are skipping creation of the constructor here
+
+    public static WebDriver driver;
+
+    // Basically the idea here is to allow child classed to access this Driver and set the driver
+    public void setDriver(WebDriver driver) {
+        BasePage.driver = driver;
+    }
+
+    // Now we also need to allow the Child classes to set their elements
+    // We will use protected so the other packages cannot access it
+    protected WebElement find (By locator) {
+        return driver.findElement(locator);
+    }
+
+    // Idea is the same as above
+    protected void set(By locator, String text) {
+        find(locator).clear();
+        find(locator).sendKeys(text); // Here we are allowing the child classes to set their locators properly
+    }
+
+    protected void click (By locator) {
+        find(locator).click();
+    }
+
+    // We have created a base page and all the methods child classes will need
+}
