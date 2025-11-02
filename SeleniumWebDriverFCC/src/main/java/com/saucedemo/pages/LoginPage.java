@@ -21,8 +21,26 @@ public void setPassword (String password) {
     set(passwordField, password);
 }
 
-public void clickLoginButton() {
+public ProductPage clickLoginButton() {
     click(loginButton);
+    return new ProductPage();
+
+    // This is a transition method
+    // Once you click login, your page will transition to product page
+    // So you need to write code accordingly, hence we created a separate page class
+    // ProductPage
+}
+
+// This is also called as convince method, as this method is taking care of two-three methods
+public ProductPage logIntoApplication(String username, String password) {
+    setUsername(username);
+    setPassword(password);
+    return clickLoginButton();
+
+}
+
+public String getErrorMessage() {
+    return find(errorMessage).getText();
 }
 
 }
