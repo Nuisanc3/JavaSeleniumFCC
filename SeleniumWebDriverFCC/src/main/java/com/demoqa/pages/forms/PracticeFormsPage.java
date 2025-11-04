@@ -9,6 +9,9 @@ public class PracticeFormsPage extends FormsPage{
 
 
     private By feamaleRadioButton = By.id("gender-radio-2");
+    private By sportsHobbiesCheckbox = By.id("hobbies-checkbox-1");
+    private By readingHobbiesCheckbox = By.id("hobbies-checkbox-2");
+    private By musicHobbiesCheckbox = By.id("hobbies-checkbox-3");
 
 
     public void clickFemaleRadioButton(){
@@ -22,5 +25,38 @@ public class PracticeFormsPage extends FormsPage{
 
     public boolean isFemaleSelected() {
         return find(feamaleRadioButton).isSelected();
+    }
+
+    public void clickSportsCheckbox() {
+        if (!find(sportsHobbiesCheckbox).isSelected()) {
+            scrollToElementJS(sportsHobbiesCheckbox);
+            clickJS(sportsHobbiesCheckbox);
+        }
+    }
+
+
+    public void clickReadingCheckbox() {
+        if (!find(readingHobbiesCheckbox).isSelected()) {
+            scrollToElementJS(readingHobbiesCheckbox);
+            clickJS(readingHobbiesCheckbox);
+        }
+    }
+
+    public void clickMusicCheckbox() {
+        if (!find(musicHobbiesCheckbox).isSelected()) {
+            scrollToElementJS(musicHobbiesCheckbox);
+            clickJS(musicHobbiesCheckbox);
+        }
+    }
+
+    public void unclickReadingCheckbox() {
+        if (find(readingHobbiesCheckbox).isSelected()) {
+            scrollToElementJS(readingHobbiesCheckbox);
+            clickJS(readingHobbiesCheckbox);
+        }
+    }
+
+    public boolean isReadingSelected() {
+        return find(readingHobbiesCheckbox).isSelected();
     }
 }
