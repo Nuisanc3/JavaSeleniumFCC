@@ -14,6 +14,6 @@ public class FormsPage extends HomePage {
     public PracticeFormsPage clickPracticeForms() {
         scrollToElementJS(practiceFormsMenuItem);
         click(practiceFormsMenuItem);
-        return new PracticeFormsPage;
+        return new PracticeFormsPage();
     }
 }
