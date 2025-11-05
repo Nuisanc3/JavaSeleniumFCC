@@ -13,12 +13,12 @@ public class ElementsPage extends HomePage {
     public WebTablesPage clickWebTables() {
         // Temp change from Click to ClickJS
         // Code worked fine
-        click(webTablesMenuItem);
+        clickJS(webTablesMenuItem);
         return new WebTablesPage();
     }
 
     public LinksPage clickLinks() {
-        click(linksMenuItem);
+        clickJS(linksMenuItem);
         return new LinksPage();
     }
 }

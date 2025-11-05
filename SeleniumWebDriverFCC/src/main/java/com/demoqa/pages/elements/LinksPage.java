@@ -8,7 +8,7 @@ public class LinksPage extends ElementsPage {
 
 
     private By badRequestLink = By.id("bad-request");
-    private By responseLink = By.id("LinkResponse");
+    private By responseLink = By.id("linkResponse");
 
 
     public void clickBadRequestLink() {
