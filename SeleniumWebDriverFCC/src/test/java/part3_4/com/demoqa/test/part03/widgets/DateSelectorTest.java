@@ -15,6 +15,7 @@ public class DateSelectorTest extends BaseTest {
     @Test
     public void testSelectingDate() {
         var datePickerPage = homePage.gotoWidgets().clickDatePicker();
+        datePickerPage.clickSelectDate();
         datePickerPage.selectMonth(month);
         datePickerPage.selectYear(year);
         datePickerPage.clickDay(day);

@@ -8,7 +8,7 @@ public class DatePickerMenuPage extends WidgetsPage{
 
 
     private By selectDateField = By.id("datePickerMonthYearInput");
-    private By monthDropDown = By.className("react-datepicker__month-select");
+    private By monthDropDown = By.cssSelector(".react-datepicker__month-select");
     private By yearDropDown = By.cssSelector(".react-datepicker__year-select");
 
     private By dayValue (String day) {
