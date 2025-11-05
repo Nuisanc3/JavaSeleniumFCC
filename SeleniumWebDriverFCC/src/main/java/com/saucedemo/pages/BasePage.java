@@ -33,5 +33,14 @@ public class BasePage {
         find(locator).click();
     }
 
+
+    public static void delay (int milliseconds) {
+        try {
+            Thread.sleep(milliseconds);
+        } catch (InterruptedException exception) {
+            exception.printStackTrace();
+        }
+    }
+
     // We have created a base page and all the methods child classes will need
 }

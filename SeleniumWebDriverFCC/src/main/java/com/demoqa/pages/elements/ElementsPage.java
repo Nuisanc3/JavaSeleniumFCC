@@ -7,12 +7,18 @@ import static utility.JavaScriptUtility.clickJS;
 
 public class ElementsPage extends HomePage {
 
-    private  By webTablesMenuItem = By.xpath("//li[@id='item-3']/span[text()='Web Tables']");
+    private By webTablesMenuItem = By.xpath("//li[@id='item-3']/span[text()='Web Tables']");
+    private By linksMenuItem =By.xpath("(//li[@id='item-5'])[1]");
 
     public WebTablesPage clickWebTables() {
         // Temp change from Click to ClickJS
         // Code worked fine
-        clickJS(webTablesMenuItem);
+        click(webTablesMenuItem);
         return new WebTablesPage();
+    }
+
+    public LinksPage clickLinks() {
+        click(linksMenuItem);
+        return new LinksPage();
     }
 }
