@@ -1,7 +1,11 @@
 package utility;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class DropDownUtility extends Utility {
 
@@ -23,6 +27,15 @@ public class DropDownUtility extends Utility {
         findDropDown(locator).selectByValue(value);
     }
 
+    public static void deSelectByValue (By locator, String value) {
+        findDropDown(locator).deselectByValue(value);
+    }
+
+
+    public static List<String> getAllSelectedOptions(By locator) {
+        List<WebElement> allSelectedOption = findDropDown(locator).getAllSelectedOptions();
+        return allSelectedOption.stream().map(WebElement::getText).collect(Collectors.toList());
+    }
 
 
 }
