@@ -15,7 +15,7 @@ public class HomePage extends BasePage {
     private By formsCard = By.xpath("//div[@id='app']//h5[text()='Forms']");
     private By elementsCard = By.xpath("//div[@id='app']//h5[text()='Elements']");
     private By widgetsCard = By.xpath("//div[@id='app']//h5[text()='Widgets']");
-    private By alertsFramesWindowsCard = By.xpath("//div[@id='app']//h5[contains(text(),'ALerts')]");
+    private By alertsFramesWindowsCard = By.xpath("//div[@id='app']//h5[contains(text(),'Alerts')]");
 
     public FormsPage gotoForms() {
         scrollToElementJS(formsCard);

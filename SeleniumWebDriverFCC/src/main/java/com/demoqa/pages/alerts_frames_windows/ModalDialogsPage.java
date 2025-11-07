@@ -2,6 +2,8 @@ package com.demoqa.pages.alerts_frames_windows;
 
 import org.openqa.selenium.By;
 
+import static utility.JavaScriptUtility.scrollToElementJS;
+
 public class ModalDialogsPage extends Alerts_Frames_WindowsPage {
 
     private By smallModalButton = By.id("showSmallModal");
@@ -11,6 +13,7 @@ public class ModalDialogsPage extends Alerts_Frames_WindowsPage {
 
 
     public void clickSmallModalButton() {
+        scrollToElementJS(smallModalButton);
         click(smallModalButton);
     }
 
