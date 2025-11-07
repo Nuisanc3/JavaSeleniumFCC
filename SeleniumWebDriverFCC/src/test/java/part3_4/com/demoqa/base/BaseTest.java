@@ -50,7 +50,7 @@ public class BaseTest {
             File source = screenshot.getScreenshotAs(OutputType.FILE);
             File destination = new File(System.getProperty("user.dir") +
                     "/resources/screenshots/(" +
-                    java.time.LocalDate.now() +
+                    java.time.LocalDate.now() + ")" +
                     testResult.getName() + ".png");
             try {
                 FileHandler.copy(source, destination);
