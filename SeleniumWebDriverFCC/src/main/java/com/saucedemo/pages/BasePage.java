@@ -14,12 +14,14 @@ public class BasePage {
 
     // Basically the idea here is to allow child classed to access this Driver and set the driver
     public void setDriver(WebDriver driver) {
+
         BasePage.driver = driver;
     }
 
     // Now we also need to allow the Child classes to set their elements
     // We will use protected so the other packages cannot access it
     protected WebElement find (By locator) {
+
         return driver.findElement(locator);
     }
 
