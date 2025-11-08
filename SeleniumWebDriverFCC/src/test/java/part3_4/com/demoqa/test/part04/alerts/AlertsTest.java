@@ -32,4 +32,16 @@ public class AlertsTest extends BaseTest {
 
 
     }
+
+
+    public void testPromptAlert() {
+        String alertText = "Selenium with Java";
+        String expectedResult = "You entered " + alertText;
+        var alertsPage = homePage.goToAlertsFramesWindowsCard().clickAlerts();
+        alertsPage.clickPromptAlertButton();
+        setAlertText(alertText);
+        acceptAlert();
+        String actualResult = alertsPage.getPromptResult();
+        Assert.assertEquals(actualResult, expectedResult , "\n Actual and Expected result Do not match \n " );
+    }
 }
