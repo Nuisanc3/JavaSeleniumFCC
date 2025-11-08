@@ -6,10 +6,20 @@ public class AlertsPage extends Alerts_Frames_WindowsPage{
 
 
     private By informationAlertButton = By.id("alertButton");
+    private By confirmationAlertButton = By.id("confirmButton");
+    private By confirmationResult = By.id("confirmResult");
 
 
     public void clickIntormationAlertButton() {
         click(informationAlertButton);
+    }
+
+    public void clickConfirmationAlertButton() {
+        click(confirmationAlertButton);
+    }
+
+    public String getConfirmationResult() {
+        return find(confirmationResult).getText();
     }
 
     public void getAlertTextMessage() {
