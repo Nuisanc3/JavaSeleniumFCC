@@ -1,6 +1,7 @@
 package utility;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class SwitchToUtility extends Utility {
 
@@ -34,5 +35,9 @@ public class SwitchToUtility extends Utility {
 
     public static void switchToFramesIndex(int index) {
         switchTo().frame(index);
+    }
+
+    public static void switchToFramesElement(WebElement element) {
+        switchTo().frame(element);
     }
 }

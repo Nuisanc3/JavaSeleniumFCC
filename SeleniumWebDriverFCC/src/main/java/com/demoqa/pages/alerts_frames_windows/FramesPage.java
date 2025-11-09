@@ -12,16 +12,23 @@ public class FramesPage extends Alerts_Frames_WindowsPage{
     private String iFrameBigBox = "frame1";
 
     private By headerFramesText = By.xpath("//div[@id='app']//h1[text()='Frames']");
+    private By iFrameSmallBox = By.xpath("//div[@id='frame2Wrapper']/iframe");
 
     private void switchToBigBox() {
         // driver.switchTo().frame(iFrameBigBox); // Created methods in the utility for clean code
         switchToFramesString(iFrameBigBox);
     }
 
-    private void switchToSmallBox() {
-        switchToFramesIndex(2);
 
+    private void switchToSmallBox() {
+        // The following two approaches are going to do the same thing, this is done for the study purpose.
+        // Approach 01 - Index
+        // switchToFramesIndex(2);
+
+        // Approach 02 - WebElements
+        switchToFramesElement(find(iFrameSmallBox));
     }
+
 
 
     public String getTextInBigFrame() {
