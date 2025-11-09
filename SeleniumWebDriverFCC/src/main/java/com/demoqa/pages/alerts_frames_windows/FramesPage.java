@@ -20,6 +20,7 @@ public class FramesPage extends Alerts_Frames_WindowsPage{
         switchToBigBox();
         String bigFrameText = find(textInFrames).getText();
         System.out.println(bigFrameText);
+        driver.switchTo().parentFrame(); // This is imp step to come out of the frames.
         return bigFrameText;
     }
 
