@@ -19,7 +19,7 @@ public class FramesPage extends Alerts_Frames_WindowsPage{
     }
 
     private void switchToSmallBox() {
-        switchToFramesIndex(3);
+        switchToFramesIndex(2);
 
     }
 
