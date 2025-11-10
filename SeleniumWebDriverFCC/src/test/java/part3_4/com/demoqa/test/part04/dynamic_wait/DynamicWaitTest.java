@@ -10,7 +10,7 @@ public class DynamicWaitTest extends BaseTest {
     public void testVisibleAfterButtonText() {
         var dynamicPage = homePage.gotoElements().clickDynamicProperties();
         String actualText = dynamicPage.getVisibleAfterButton();
-        String expectedText = "Visible After 5 seconds";
+        String expectedText = "Visible After 5 Seconds";
         Assert.assertEquals(actualText, expectedText, "\n  Actual and Expected text do not match\n");
     }
 }
