@@ -10,6 +10,8 @@ public class Alerts_Frames_WindowsPage extends HomePage {
     private By modalDialogsMenuItem = By.xpath("//li[@id='item-4']/span[text()='Modal Dialogs']");
     private By alertsMenuItem = By.xpath("//li[@id='item-1']/span[text()='Alerts']");
     private By framesMenuItem = By.xpath("//li[@id='item-2']/span[text()='Frames']");
+    private By browswerWindowsMenuItem = By.xpath("//li[@id='item-0']/span[text()='Browser Windows']");
+
 
     public FramesPage clickFrames() {
         scrollToElementJS(framesMenuItem);
@@ -29,5 +31,11 @@ public class Alerts_Frames_WindowsPage extends HomePage {
         scrollToElementJS(modalDialogsMenuItem);
         click(modalDialogsMenuItem);
         return new ModalDialogsPage();
+    }
+
+    public BrowserWindowsPage clickBrowserWindows() {
+        scrollToElementJS(browswerWindowsMenuItem);
+        click(browswerWindowsMenuItem);
+        return new BrowserWindowsPage();
     }
 }
