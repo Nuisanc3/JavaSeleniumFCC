@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 
 import java.util.Set;
 
+import static utility.JavaScriptUtility.scrollToElementJS;
 import static utility.SwitchToUtility.switchToWindow;
 
 public class BrowserWindowsPage extends Alerts_Frames_WindowsPage {
@@ -12,6 +13,7 @@ public class BrowserWindowsPage extends Alerts_Frames_WindowsPage {
 
 
     public void clickNewWindowButton() {
+        scrollToElementJS(newWindowButton);
         click(newWindowButton);
     }
 
