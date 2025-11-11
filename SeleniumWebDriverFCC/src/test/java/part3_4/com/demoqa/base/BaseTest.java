@@ -17,6 +17,7 @@ import org.testng.annotations.BeforeMethod;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 
 import static utility.Utility.setUtilityDriver;
 
@@ -32,6 +33,10 @@ public class BaseTest {
     public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+        // It is a standard practice to have implicit wait in the setup method
+        // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        // Preffered is to use explicit wait so that you are not waiting everytime when you call driver
+        // DO NOT MIX IMPLICIT and EXPLICIT WAITS this can cause lot of unpredictibility. 
     }
 
     @BeforeMethod

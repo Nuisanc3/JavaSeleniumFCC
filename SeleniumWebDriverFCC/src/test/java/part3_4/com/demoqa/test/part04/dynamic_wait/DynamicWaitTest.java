@@ -19,7 +19,7 @@ public class DynamicWaitTest extends BaseTest {
         var progressBarPage = homePage.gotoWidgets().clickProgressBar();
         progressBarPage.clickStartButton();
         String actualValue = progressBarPage.getProgressValue();
-        String expectedValue = "100";
+        String expectedValue = "100%";
         Assert.assertEquals(actualValue, expectedValue, "\n Value is not 100% \n ");
 
 
