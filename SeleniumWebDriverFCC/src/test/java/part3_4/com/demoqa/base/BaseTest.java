@@ -36,7 +36,12 @@ public class BaseTest {
         // It is a standard practice to have implicit wait in the setup method
         // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         // Preffered is to use explicit wait so that you are not waiting everytime when you call driver
-        // DO NOT MIX IMPLICIT and EXPLICIT WAITS this can cause lot of unpredictibility. 
+        // DO NOT MIX IMPLICIT and EXPLICIT WAITS this can cause lot of unpredictibility.
+
+        // ********************** Page Load Timeout and Script Load Timeout
+        // Page load timeout holds the script execution till the timeout and even if the page does not
+        // load within that timeout then we will get an exception
+        // Script load timeout hold the script execution till the asymchronus javascipt finishes the execution
     }
 
     @BeforeMethod
