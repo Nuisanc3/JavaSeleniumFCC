@@ -12,6 +12,10 @@ public class KeyboardTest extends BaseTest {
         var textboxPage = homePage.gotoElements().clickTextBox();
         textboxPage.setFullName(name);
         textboxPage.setEmail(email);
+        textboxPage.setCurrentAddress("'heaven on earth' House, God Lane,");
+        textboxPage.setCurrentAddress("Next to God park,");
+        textboxPage.setCurrentAddress("Sydney Australia");
+        textboxPage.clickSubmitButton();
     }
 
 }

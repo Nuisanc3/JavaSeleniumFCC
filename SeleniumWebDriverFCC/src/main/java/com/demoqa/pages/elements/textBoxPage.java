@@ -10,6 +10,13 @@ import static utility.JavaScriptUtility.scrollToElementJS;
 public class textBoxPage extends ElementsPage {
 
     private By fullNameField = By.id("userName");
+    private By currentAddressField = By.xpath("//textarea[@id='currentAddress']]");
+    private By submitButton = By.id("submit");
+
+    public void clickSubmitButton() {
+        scrollToElementJS(submitButton);
+        click(submitButton);
+    }
 
     public void setFullName(String name) {
         scrollToElementJS(fullNameField);
@@ -18,6 +25,10 @@ public class textBoxPage extends ElementsPage {
 
     public void setEmail(String email) {
         setFullName(Keys.chord(Keys.TAB, email));
+    }
+
+    public void setCurrentAddress(String address) {
+        find(currentAddressField).sendKeys(Keys.chord(address + Keys.ENTER));
     }
 
 }
