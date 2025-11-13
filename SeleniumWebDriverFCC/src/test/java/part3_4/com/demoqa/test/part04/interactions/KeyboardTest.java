@@ -1,5 +1,6 @@
 package part3_4.com.demoqa.test.part04.interactions;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import part3_4.com.demoqa.base.BaseTest;
 
@@ -16,6 +17,8 @@ public class KeyboardTest extends BaseTest {
         textboxPage.setCurrentAddress("Next to God park,");
         textboxPage.setCurrentAddress("Sydney Australia");
         textboxPage.clickSubmitButton();
+        String actualAdddress = textboxPage.getCurrentAddress();
+        Assert.assertTrue(actualAdddress.contains("'heaven on earth'"), "\n Actual address does not contain 'heaven on earth' \n");
     }
 
 }

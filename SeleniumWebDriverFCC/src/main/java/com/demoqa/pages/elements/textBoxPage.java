@@ -5,13 +5,21 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
 import static utility.ActionsUtility.sendKeys;
+import static utility.GetUtility.getText;
 import static utility.JavaScriptUtility.scrollToElementJS;
+import static utility.WaitUtility.explicitWaitUntilVisible;
 
 public class textBoxPage extends ElementsPage {
 
     private By fullNameField = By.id("userName");
     private By currentAddressField = By.xpath("//textarea[@id='currentAddress']]");
     private By submitButton = By.id("submit");
+    private By currentAddressResult = By.xpath("//p[@id='currentAddress']");
+
+    public String getCurrentAddress() {
+        explicitWaitUntilVisible(5, currentAddressResult);
+        return getText(currentAddressResult);
+    }
 
     public void clickSubmitButton() {
         scrollToElementJS(submitButton);
