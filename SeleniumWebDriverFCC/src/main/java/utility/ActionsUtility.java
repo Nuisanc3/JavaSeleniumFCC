@@ -1,5 +1,6 @@
 package utility;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
@@ -12,5 +13,9 @@ public class ActionsUtility extends Utility {
     public static void dragAndDropBy(WebElement source, int x, int y) {
         act().dragAndDropBy(source, x, y).perform();
 
+    }
+
+    public static void sendKeys(WebElement source, CharSequence Keys) {
+        act().sendKeys(source, Keys).perform();
     }
 }
