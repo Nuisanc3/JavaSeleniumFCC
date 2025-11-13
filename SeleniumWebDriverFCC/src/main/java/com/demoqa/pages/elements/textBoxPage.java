@@ -12,7 +12,7 @@ import static utility.WaitUtility.explicitWaitUntilVisible;
 public class textBoxPage extends ElementsPage {
 
     private By fullNameField = By.id("userName");
-    private By currentAddressField = By.xpath("//textarea[@id='currentAddress']]");
+    private By currentAddressField = By.xpath("//textarea[@id='currentAddress']");
     private By submitButton = By.id("submit");
     private By currentAddressResult = By.xpath("//p[@id='currentAddress']");
 
