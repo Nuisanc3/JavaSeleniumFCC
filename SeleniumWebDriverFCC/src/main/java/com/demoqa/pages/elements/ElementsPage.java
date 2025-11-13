@@ -11,7 +11,7 @@ public class ElementsPage extends HomePage {
     private By webTablesMenuItem = By.xpath("//li[@id='item-3']/span[text()='Web Tables']");
     private By linksMenuItem =By.xpath("(//li[@id='item-5'])[1]");
     private By dynamicPropertiesMenuItem = By.xpath("//li[@id='item-8']/span[text()='Dynamic Properties']");
-    private By textBoxMenuItem = By.xpath("//li[@id='item-0']/span[text()='TExt Box'");
+    private By textBoxMenuItem = By.xpath("//li[@id='item-0']//span[text()='Text Box']");
 
     public textBoxPage clickTextBox() {
         scrollToElementJS(textBoxMenuItem);
